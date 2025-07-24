@@ -37,5 +37,5 @@ Welcome to the **Machine Learning** section of this repository. This folder cont
 1. Clone the repo:
    ```bash
    git clone https://github.com/HariniLV-3103/Machine-Learning.git
-   cd Machine-Learning/'folder or file name
+   cd Machine-Learning/'folder or file name'
 
