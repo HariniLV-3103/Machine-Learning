@@ -1,69 +1,77 @@
-Assignment 3: Email Spam or Ham Classification using Naive Bayes, KNN, and SVM
-Objective
-To classify emails as Spam (1) or Ham (0) using Naive Bayes, K-Nearest Neighbors (KNN), and Support Vector Machine (SVM) algorithms. The aim is to evaluate model performance through statistical metrics and visualizations, and compare the effectiveness of these classifiers.
+# ✉️ Experiment 3: Email Spam or Ham Classification
 
-Tools and Libraries Used
-Python – programming language
-Pandas – data handling and preprocessing
-NumPy – numerical computations
-SciPy – z-score for outlier detection
-Matplotlib & Seaborn – visualization and EDA
-Scikit-learn – ML models, preprocessing, and evaluation metrics
+## Objective
+To classify emails as **spam** or **ham** using three machine learning algorithms—Naïve Bayes, K-Nearest Neighbors (KNN), and Support Vector Machine (SVM)—and evaluate their performance using accuracy metrics and K-Fold cross-validation.
 
-Dataset Explored
-Dataset Name: spam_or_not_spam.csv
-Features: Email text data (preprocessed into TF-IDF vectors)
+---
 
-Target Label:
-0 → Ham (not spam)
-1 → Spam
+## Dataset
+- **Source:** [Spambase – Kaggle](https://www.kaggle.com)  
+- **Description:** This dataset includes extracted features from emails along with a label indicating whether an email is spam or ham (not spam).
 
-Tasks Performed
-Data Preprocessing
-Removed missing values and handled outliers using z-score.
-Converted text data into TF-IDF features (1000 max features).
-Scaled features for algorithms sensitive to distance (KNN, SVM).
-Data Splitting
-Train, Validation, and Test splits created.
-Raw features → Naive Bayes.
-Scaled features → KNN and SVM.
+---
 
-Model Building
-Naive Bayes: GaussianNB, MultinomialNB, BernoulliNB.
-KNN: k = 1, 3, 5, 7 and kd_tree, ball_tree algorithms.
-SVM: Linear, Polynomial, RBF, and Sigmoid kernels.
+## Implementation Steps
+1. **Load & Preprocess the Dataset**
+   - Handle missing values
+   - Normalize/standardize numerical features
+   - Encode categorical data if necessary
 
-Evaluation Metrics Used
-Accuracy
-Precision
-Recall
-F1 Score
-F-beta Score (β = 0.5)
-Matthews Correlation Coefficient (MCC)
-Confusion Matrix (heatmap)
-ROC & AUC Curve
+2. **Exploratory Data Analysis (EDA)**
+   - Check class balance (spam vs ham)
+   - Visualize feature distributions (histograms, boxplots)
+   - Plot correlations to detect important features
 
-Cross Validation
-Applied 5-Fold Stratified Cross Validation for robust model performance comparison.
+3. **Data Splitting**
+   - Divide dataset into training and testing sets
+   - Use stratified sampling to maintain class balance
 
-Observations
-MultinomialNB outperformed other Naive Bayes models, showing strong precision and balanced recall.
-KNN performance varied; higher k values stabilized predictions but reduced recall slightly.
-SVM (RBF & Sigmoid kernels) achieved the best performance, with high precision and strong recall, making them ideal for spam detection.
+4. **Model Training**
+   - **Naïve Bayes**: Gaussian, Multinomial, Bernoulli variants
+   - **KNN**: Vary `k`, explore KDTree and BallTree implementations
+   - **SVM**: Train with Linear, Polynomial, RBF, and Sigmoid kernels
 
-Inference
-MultinomialNB is best suited for text classification tasks using TF-IDF features.
-KNN is less effective on high-dimensional sparse text data.
-SVM with RBF kernel is the most reliable classifier, balancing accuracy, recall, and precision.
+5. **Model Evaluation**
+   - Accuracy, Precision, Recall, F1-score
+   - Confusion Matrix
+   - ROC Curve and AUC
 
-Learning Outcomes
-Learned text preprocessing using TF-IDF vectorization.
-Understood the importance of feature scaling in distance-based algorithms.
-Applied and compared multiple classifiers (Naive Bayes, KNN, SVM) on the same dataset.
-Learned to evaluate classifiers using precision, recall, F1, MCC, ROC-AUC.
-Gained insights into model suitability for sparse high-dimensional data like text.
+6. **Cross-Validation**
+   - Perform **K-Fold Cross Validation (K = 5)**
+   - Record average metrics across folds
 
-Notes
-Complete Python code includes inline comments for clarity.
-Outputs & visualizations (confusion matrices, ROC curves) are included.
-Final comparison is presented in summary tables for easy interpretation.
+7. **Comparison & Observations**
+   - Compare model performance
+   - Identify the most suitable algorithm for spam classification
+
+---
+
+## Expected Results
+- Naïve Bayes is generally fast and effective for text classification.
+- KNN performance depends on the choice of `k` and distance metric.
+- SVM with RBF kernel usually provides strong accuracy but may be slower.
+
+---
+
+## Libraries Used
+- `pandas` – Data handling
+- `numpy` – Numerical computations
+- `matplotlib`, `seaborn` – Visualizations
+- `scikit-learn` – ML models, preprocessing, evaluation
+
+---
+
+## Learning Outcomes
+- Learned how to preprocess and analyze text-based classification datasets.
+- Applied **Naïve Bayes, KNN, and SVM** for email classification.
+- Understood the role of **cross-validation** in ensuring model robustness.
+- Evaluated models using multiple metrics beyond accuracy (Precision, Recall, F1, AUC).
+- Compared strengths and weaknesses of probabilistic, instance-based, and kernel-based classifiers.
+
+---
+
+## How to Run
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/your-username/your-repo.git
+   cd your-repo/Experiment2
