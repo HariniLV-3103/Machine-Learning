@@ -10,6 +10,8 @@ Welcome to the **Machine Learning** section of this repository. This folder cont
 |---------------|-------------|
 | `Assignment1/` | Working with NumPy, Pandas, SciPy, Scikit-learn, Matplotlib |
 | `Assignment2/` | Loan Amount Prediction using Linear Regression |
+| `Assignment2/` | Email Spam or Ham Classification |
+| `Assignment2/` | Ensemble Prediction and Decision Tree Model Evaluation |
 | `README.md`    | This overview file |
 
 ---
