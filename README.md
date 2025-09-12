@@ -10,8 +10,9 @@ Welcome to the **Machine Learning** section of this repository. This folder cont
 |---------------|-------------|
 | `Assignment1/` | Working with NumPy, Pandas, SciPy, Scikit-learn, Matplotlib |
 | `Assignment2/` | Loan Amount Prediction using Linear Regression |
-| `Assignment2/` | Email Spam or Ham Classification |
-| `Assignment2/` | Ensemble Prediction and Decision Tree Model Evaluation |
+| `Assignment3/` | Email Spam or Ham Classification |
+| `Assignment4/` | Ensemble Prediction and Decision Tree Model Evaluation |
+| `Assignment5/` | Perceptron vs Multilayer Perceptron (A/B Experiment) with Hyperparameter Tuning |
 | `README.md`    | This overview file |
 
 ---
@@ -31,6 +32,8 @@ Welcome to the **Machine Learning** section of this repository. This folder cont
 - `Scikit-learn` – Model training and evaluation
 - `Matplotlib`, `Seaborn` – Data visualization
 - `Jupyter Notebooks` – Code documentation and explanation
+- `TensorFlow` – For building and training deep learning models.
+- `Pillow` – For image loading and preprocessing
 
 ---
 
