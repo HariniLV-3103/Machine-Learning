@@ -35,13 +35,6 @@ To fit and evaluate a **Linear Classification Model** (single or multi-layer neu
 - Compare decision boundaries and analyze classification results.  
 - Discuss whether linear models are adequate for this dataset.
 
-### Methodology
-- The dataset is preprocessed and split into train/test sets.  
-- A **linear classifier** (e.g., logistic regression or single-layer perceptron) is trained.  
-- Model parameters are learned via gradient descent or closed-form approximation.  
-- Performance is evaluated using metrics such as accuracy, precision, recall, F1-score, and ROC-AUC.  
-- Visualization includes decision boundary plots and comparison of model predictions.
-
 ### Expected Output
 - Classification accuracy and confusion matrix.  
 - Visual comparison of predicted vs. actual classes.  
